@@ -1,0 +1,27 @@
+{
+  "name": "Tessel-HC-SR04",
+  "version": "0.0.0",
+  "description": "Library for connecting Tessel to HC-SR04 ultrasonic rangefinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "tessel run test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frijol/Tessel-HC-SR04.git"
+  },
+  "keywords": [
+    "tessel",
+    "HC-SR04",
+    "GPIO",
+    "ultrasonic",
+    "rangefinder",
+    "distance"
+  ],
+  "author": "Kelsey Breseman",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Frijol/Tessel-HC-SR04/issues"
+  },
+  "homepage": "https://github.com/Frijol/Tessel-HC-SR04"
+}
