@@ -1,12 +1,3 @@
-// Copyright 2014 Technical Machine, Inc. See the COPYRIGHT
-// file at the top-level directory of this distribution.
-//
-// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
-// http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
-// <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
-// option. This file may not be copied, modified, or distributed
-// except according to those terms.
-
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 
@@ -15,7 +6,7 @@ function Rangefinder (hardware, callback) {
   // Port assignment
   self.hardware = hardware;
   // Pin assignment
-  self.triggerPin = hardware.pin['G3'];//digital[0];
+  self.triggerPin = hardware.pin['G3'];
   self.echoPin = hardware.pin['G4'];
   // Emit ready event
   self.emit('ready');
@@ -26,6 +17,7 @@ function Rangefinder (hardware, callback) {
 
 util.inherits(Rangefinder, EventEmitter);
 
+// Tells the rangefinder to send out a pulse
 Rangefinder.prototype.pulse = function (callback) {
   var self = this;
   // Send a pulse
