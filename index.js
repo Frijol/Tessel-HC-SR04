@@ -6,8 +6,8 @@ function Rangefinder (hardware, callback) {
   // Port assignment
   self.hardware = hardware;
   // Pin assignment
-  self.triggerPin = hardware.pin['G3'];
-  self.echoPin = hardware.pin['G4'];
+  self.triggerPin = hardware.pin['G4'];
+  self.echoPin = hardware.pin['G3'];
   // Emit ready event
   self.emit('ready');
   if (callback) {
@@ -26,10 +26,14 @@ Rangefinder.prototype.pulse = function (callback) {
     self.triggerPin.output(1);
     setTimeout(function () {
       self.triggerPin.output(0);
+      var duration = 0;
+      // This doesn't work yet
+      // duration = echoPin.pulseIn(true);
+      // var distance = duration / 60;
       if (callback) {
-        callback();
+        callback(duration);
       }
-    }, 0.01);
+    }, 1);
   }, 2);
 };
 

@@ -7,23 +7,9 @@ var ranger = rangefinderLib.use(tessel.port['GPIO']);
   setInterval(function () {
     ranger.pulse();
     // console.log(ranger.echoPin.read());
-  }, 100);
+    // Need to: measure the length of pulse received back over echo pin
+  }, 1);
   // ranger.on('data', function (data) {
   //   console.log(data);
   // });
 // });
-
-// triggerPin = tessel.port['GPIO'].digital[0];
-// echoPin = tessel.port['GPIO'].analog[0];
-// // Turn on
-// triggerPin.output[0];
-// setTimeout(function () {
-//   triggerPin.output[1];
-//   setTimeout(function () {
-//     self.triggerPin.output[0];
-//     self.emit('ready');
-//     if (callback) {
-//       callback(null, self);
-//     }
-//   }, 10);
-// }, 20);
